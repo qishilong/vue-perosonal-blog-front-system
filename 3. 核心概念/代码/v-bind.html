@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport"
+	      content = "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<div id = "app">
+		<img :src = "image" alt = "">   <!-- 简写, 正常写法为 -> v-bind: , src填image实例 -->
+	</div>
+	<script src = "./vue.min.js"></script>
+	<script>
+		let vm = new Vue ( {
+			data: {
+				image: "https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2342083191,4139347491&fm=26&gp=0.jpg"
+			}
+		} );
+		vm.$mount ( "#app" );   //配置挂载
+	</script>
+</body>
+</html>
