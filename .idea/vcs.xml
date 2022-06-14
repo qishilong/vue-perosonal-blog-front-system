@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$/优化工程结构/my-site" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/搭建工程/my-site" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/组件事件/my-site" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/计算属性/my-site" vcs="Git" />
-  </component>
-</project>
