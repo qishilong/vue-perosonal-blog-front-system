@@ -6,13 +6,19 @@ import "./styles/global.less";
 import router from "./router";
 import showMessage from "./utils/showMessage";
 import "./eventBus";
+
 Vue.prototype.$showMessage = showMessage;
 
 // 注册全局指令
+import vLazy from "./directives/lazy";
 import vLoading from "./directives/loading";
-Vue.directive("loading", vLoading);
 
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount("#app");
+Vue.directive ( "loading",
+                vLoading );
+Vue.directive ( "lazy",
+                vLazy );
+
+new Vue ( {
+              router,
+              render: ( h ) => h ( App )
+          } ).$mount ( "#app" );
