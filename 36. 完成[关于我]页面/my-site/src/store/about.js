@@ -1,10 +1,10 @@
-import { getBanners } from "@/api/banner";
+import { getAbout } from "@/api/about";
 
 export default {
     namespaced: true,
     state     : {
         loading: false,
-        data   : []
+        data   : ""
     },
     mutations : {
         setLoading ( state,
@@ -17,13 +17,13 @@ export default {
         }
     },
     actions   : {
-        async fetchBanner ( ctx ) {
-            if ( ctx.state.data.length ) {
+        async fetchAbout ( ctx ) {
+            if ( ctx.state.data ) {
                 return;
             }
             ctx.commit ( "setLoading",
                          true );
-            const resp = await getBanners ();
+            const resp = await getAbout ();
             ctx.commit ( "setData",
                          resp );
             ctx.commit ( "setLoading",

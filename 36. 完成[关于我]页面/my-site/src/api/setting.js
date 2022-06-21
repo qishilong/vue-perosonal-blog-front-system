@@ -1,5 +1,5 @@
-import request from "./request";
+import request from "@/api/request";
 
-export async function getSetting() {
-  return await request.get("/api/setting");
+export async function getSetting () {
+    return await request.get ( "/api/setting" );
 }
